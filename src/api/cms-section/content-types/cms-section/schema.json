@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_sections",
+  "info": {
+    "singularName": "cms-section",
+    "pluralName": "cms-sections",
+    "displayName": "CMSSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MONTHLY_HOMA": {
+      "type": "string"
+    },
+    "JSONSection": {
+      "type": "json"
+    }
+  }
+}

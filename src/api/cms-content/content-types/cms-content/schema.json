@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cms_contents",
+  "info": {
+    "singularName": "cms-content",
+    "pluralName": "cms-contents",
+    "displayName": "CMSContent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "JSONContent": {
+      "type": "json"
+    }
+  }
+}

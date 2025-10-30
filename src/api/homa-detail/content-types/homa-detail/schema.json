@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homa_details",
+  "info": {
+    "singularName": "homa-detail",
+    "pluralName": "homa-details",
+    "displayName": "HomaDetail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "C_Email": {
+      "type": "email"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IsINR": {
+      "type": "boolean"
+    },
+    "DynamicContent": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.slider"
+      ]
+    }
+  }
+}
