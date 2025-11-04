@@ -23,6 +23,22 @@ export interface SharedNotification extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedPushnotification extends Struct.ComponentSchema {
+  collectionName: 'components_home_banner_sections';
+  info: {
+    description: 'Main  banner with title, subtitle, and image';
+    displayName: 'Push Notifications';
+    icon: 'airplay';
+  };
+  attributes: {
+    button_link: Schema.Attribute.String;
+    button_text: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images'>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -79,6 +95,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.media': SharedMedia;
       'shared.notification': SharedNotification;
+      'shared.pushnotification': SharedPushnotification;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
