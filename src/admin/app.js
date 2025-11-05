@@ -39,7 +39,7 @@ export default {
       en: {
         "app.components.LeftMenu.navbrand.title": "AstroVed CMS",
         "app.components.LeftMenu.navbrand.workplace": "Admin Dashboard",
-        "Auth.form.welcome.title": "Welcome to AstroVed CMS Portal",
+        "Auth.form.welcome.title": "Welcome to AstroVed CMS",
         "Auth.form.welcome.subtitle": "Sign in to manage your AstroVed content and data",
       },
     },
