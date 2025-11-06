@@ -656,6 +656,37 @@ export interface ApiDonateHomaDonateHoma extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFreePanchangamFreePanchangam
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'free_panchangams';
+  info: {
+    displayName: 'Free Panchangam';
+    pluralName: 'free-panchangams';
+    singularName: 'free-panchangam';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Banner: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Blocks;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::free-panchangam.free-panchangam'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1238,6 +1269,7 @@ declare module '@strapi/strapi' {
       'api::cms-content.cms-content': ApiCmsContentCmsContent;
       'api::cms-section.cms-section': ApiCmsSectionCmsSection;
       'api::donate-homa.donate-homa': ApiDonateHomaDonateHoma;
+      'api::free-panchangam.free-panchangam': ApiFreePanchangamFreePanchangam;
       'api::global.global': ApiGlobalGlobal;
       'api::homa-detail.homa-detail': ApiHomaDetailHomaDetail;
       'plugin::content-releases.release': PluginContentReleasesRelease;

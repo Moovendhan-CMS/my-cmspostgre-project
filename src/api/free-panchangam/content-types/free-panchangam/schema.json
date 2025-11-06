@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "free_panchangams",
+  "info": {
+    "singularName": "free-panchangam",
+    "pluralName": "free-panchangams",
+    "displayName": "Free Panchangam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Banner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "blocks"
+    }
+  }
+}
